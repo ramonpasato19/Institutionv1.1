@@ -57,6 +57,8 @@
         <!-- maven-compiler-plugin -->
         <maven.compiler.target>1.7</maven.compiler.target>
         <maven.compiler.source>1.7</maven.compiler.source>
+        <sonar.host.url> http://localhost:9000</sonar.host.url> 
+        	
     </properties>
 
 
@@ -217,6 +219,7 @@
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>${version.wildfly.maven.plugin}</version>
             </plugin>
+
         </plugins>
     </build>
 
