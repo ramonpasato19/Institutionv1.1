@@ -33,8 +33,7 @@ public class Person implements Serializable {
 	@Digits(fraction = 0, integer = 12)
 	@Column(name = "identification")
 	private String identification;
-	
-	
+		
 	@Size(min = 10, max = 10)
 	@Digits(fraction = 0, integer = 12)
 	@Column(name = "name")
