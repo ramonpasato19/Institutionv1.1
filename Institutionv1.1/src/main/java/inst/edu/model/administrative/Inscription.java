@@ -1,4 +1,4 @@
-package inst.edu.model;
+package inst.edu.model.administrative;
 
 import java.io.Serializable;
 

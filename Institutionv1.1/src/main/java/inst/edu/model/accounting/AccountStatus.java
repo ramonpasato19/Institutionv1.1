@@ -1,4 +1,4 @@
-package inst.edu.model;
+package inst.edu.model.accounting;
 
 import java.io.Serializable;
 
@@ -8,34 +8,35 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.Size;
 
 /**
  * @author Luis Ramon
- * @version 1.0.0 La entidad sirve para tipo de identification de persona
+ * @version 1.0.0 La entidad sirve para crear una tabla estado de persona
  */
 @Entity
-@Table(name = "type_identification")
-public class TypeIdentification implements Serializable {
+@Table(name = "account_status")
+public class AccountStatus implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "type_identification_id")
-	private int typeIdentificationId;
+	@Column(name = "account_status_id")
+	private int accountStatusId;
 
 	@Size(min = 10, max = 10)
 	@Digits(fraction = 0, integer = 12)
 	@Column(name = "name")
 	private String name;
 
-	public int getTypeIdentificationId() {
-		return typeIdentificationId;
+	public int getAccountStatusId() {
+		return accountStatusId;
 	}
 
-	public void setTypeIdentificationId(int typeIdentificationId) {
-		this.typeIdentificationId = typeIdentificationId;
+	public void setAccountStatusId(int accountStatusId) {
+		this.accountStatusId = accountStatusId;
 	}
 
 	public String getName() {
@@ -45,8 +46,6 @@ public class TypeIdentification implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
-	
 
+	
 }

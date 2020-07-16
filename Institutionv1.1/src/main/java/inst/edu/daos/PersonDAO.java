@@ -5,16 +5,27 @@
  */
 package inst.edu.daos;
 
-import inst.edu.model.Person;
+import inst.edu.model.administrative.Person;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
  * @author Hernan Morocho
  */
+@Stateless
 public class PersonDAO {
-    
-    public void savePerson(Person p){
-        
-        
+
+    @PersistenceContext(name = "java:jboss/datasources/sgaDS")
+    private EntityManager em;
+
+    public void savePerson(Person p) {
+        em.persist(p);
     }
+
+    public void update(Person persona) {
+        em.merge(persona);
+    }
+
 }

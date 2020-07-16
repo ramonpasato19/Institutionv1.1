@@ -1,4 +1,4 @@
-package inst.edu.model;
+package inst.edu.model.administrative;
 
 import java.io.Serializable;
 
@@ -8,36 +8,38 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Email;
 
 /**
  * @author Luis Ramon
- * @version 1.0.0 La entidad sirve para crear una tabla docente
+ * @version 1.0.0 La entidad sirve para crear una tabla estudiante
  */
 @Entity
-@Table(name = "teacher")
-public class Teacher implements Serializable {
+@Table(name = "student")
+public class Student implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "teacher_id")
-	private int teacherId;
+	@Column(name = "student_id")
+	private int studentId;
 
     @Email
     @Column(name = "email_institution")
 	private String emailInstitution;
     
-	@Column(name = "code_teacher")
-	private String codeTeacher;
+	@Column(name = "code_student")
+	private String codeStudent;
 
-	public int getTeacherId() {
-		return teacherId;
+	public int getStudentId() {
+		return studentId;
 	}
 
-	public void setTeacherId(int teacherId) {
-		this.teacherId = teacherId;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
 
 	public String getEmailInstitution() {
@@ -48,14 +50,14 @@ public class Teacher implements Serializable {
 		this.emailInstitution = emailInstitution;
 	}
 
-	public String getCodeTeacher() {
-		return codeTeacher;
+	public String getCodeStudent() {
+		return codeStudent;
 	}
 
-	public void setCodeTeacher(String codeTeacher) {
-		this.codeTeacher = codeTeacher;
+	public void setCodeStudent(String codeStudent) {
+		this.codeStudent = codeStudent;
 	}
 	
-	
+    
 
 }

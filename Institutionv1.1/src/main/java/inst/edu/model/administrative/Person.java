@@ -1,4 +1,4 @@
-package inst.edu.model;
+package inst.edu.model.administrative;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -39,8 +39,8 @@ public class Person implements Serializable {
 	@Column(name = "name")
 	private String name;
 	
-	@Size(min = 10, max = 10)
-	@Digits(fraction = 0, integer = 12)
+	//@Size(min = 10, max = 10)
+	//@Digits(fraction = 0, integer = 12)
 	@Column(name = "date_birth")
 	private Date dateBirth;
 	
