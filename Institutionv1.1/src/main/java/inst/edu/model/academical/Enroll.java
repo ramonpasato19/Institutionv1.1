@@ -19,8 +19,6 @@ import javax.validation.constraints.Size;
 @Table(name = "enroll")
 public class Enroll {
 
-    private static final long serialVersionUID = 1L;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "enroll_id")
